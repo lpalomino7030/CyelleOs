@@ -1,0 +1,21 @@
+# Archiso build
+cyelle/work/
+cyelle/out/
+
+# Caché
+*.log
+*.tmp
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Backups
+*~
+*.bak
