@@ -1,0 +1,57 @@
+CyelleOs/
+
+README.md
+
+build.sh
+
+profiledef.sh
+
+packages.x86_64
+
+pacman.conf
+
+airootfs/
+
+    etc/
+    
+    usr/
+    
+    home/
+    
+        liveuser/
+    
+            .config/
+    
+                hypr/
+    
+                waybar/
+    
+                kitty/
+    
+                nvim/
+    
+                caelestia/
+
+scripts/
+
+    install.sh
+    
+    firstboot.sh
+
+branding/
+
+```markdown
+wallpapers/
+
+logo.png
+
+grub.png
+
+plymouth/
+```
+
+iso/
+
+doc/
+
+​	`tree.txt`
