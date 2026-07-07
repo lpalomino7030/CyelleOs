@@ -1,18 +1,20 @@
 package cli
 
+import "cyelle/internal/core"
+
 type Registry struct {
-	commands map[string]Command
+	commands map[string]core.Command
 }
 
-func NewRegistry() *Registry{
+func NewRegistry() *Registry {
 	return &Registry{
-		commands: make(map[string]Command),
+		commands: make(map[string]core.Command),
 	}
 }
 
-func (r *Registry) List() []Command {
+func (r *Registry) List() []core.Command {
 
-	commands := make([]Command, 0, len(r.commands))
+	commands := make([]core.Command, 0, len(r.commands))
 
 	for _, command := range r.commands {
 		commands = append(commands, command)
@@ -21,12 +23,11 @@ func (r *Registry) List() []Command {
 	return commands
 }
 
-func (r *Registry) Register(command Command) {
+func (r *Registry) Register(command core.Command) {
 	r.commands[command.Name()] = command
 }
 
-func (r *Registry) Get(name string) (Command, bool) {
+func (r *Registry) Get(name string) (core.Command, bool) {
 	cmd, ok := r.commands[name]
 	return cmd, ok
 }
-

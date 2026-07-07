@@ -3,18 +3,18 @@ package commands
 import (
 	"fmt"
 
-	"cyelle/internal/cli"
+	"cyelle/internal/core"
 )
 
 type HelpCommand struct {
-	provider cli.CommandProvider
+	provider core.CommandProvider
 }
 
 func (HelpCommand) Name() string {
 	return "help"
 }
 
-func NewHelpCommand(provider cli.CommandProvider) HelpCommand {
+func NewHelpCommand(provider core.CommandProvider) HelpCommand {
 	return HelpCommand{
 		provider: provider,
 	}
@@ -24,16 +24,20 @@ func (HelpCommand) Description() string {
 	return "Show available commands."
 }
 
-func (HelpCommand) Run(args []string) int {
+func (h HelpCommand) Run(args []string) int {
 
 	fmt.Println("Cyelle CLI")
 	fmt.Println()
+
 	fmt.Println("Available commands:")
-	fmt.Println("  build")
-	fmt.Println("  doctor")
-	fmt.Println("  clean")
-	fmt.Println("  version")
-	fmt.Println("  help")
+
+	for _, cmd := range h.provider.List() {
+
+		fmt.Printf("  %-10s %s\n",
+			cmd.Name(),
+			cmd.Description())
+
+	}
 
 	return 0
 }

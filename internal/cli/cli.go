@@ -1,7 +1,9 @@
 package cli
 
-import ("cyelle/internal/commands"
-"fmt")
+import (
+	"cyelle/internal/commands"
+	"fmt"
+)
 
 type CLI struct {
 	registry *Registry
@@ -13,8 +15,14 @@ func New() *CLI {
 	help := commands.NewHelpCommand(registry)
 
 	registry.Register(help)
+
+	registry.Register(commands.BuildCommand{})
+
+	registry.Register(commands.CleanCommand{})
+
 	registry.Register(commands.DoctorCommand{})
-	registry.Register(commands.HelpCommand{})
+
+	registry.Register(commands.VersionCommand{})
 
 	return &CLI{
 		registry: registry,
