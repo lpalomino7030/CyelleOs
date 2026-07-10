@@ -29,6 +29,9 @@ foot-terminfo
 git
 gpart
 gpm
+mesa
+vulkan-radeon
+libva-mesa-driver
 gptfdisk
 grml-zsh-config
 grub
@@ -131,3 +134,6 @@ qt5-wayland
 qt6-wayland
 dolphin
 go
+ttf-dejavu
+noto-fonts
+greetd

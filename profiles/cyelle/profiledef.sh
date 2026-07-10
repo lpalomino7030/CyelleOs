@@ -4,7 +4,7 @@
 iso_name="cyelleOs"
 iso_label="ARCH_$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y%m)"
 iso_publisher="CyelleOs <https://github.com/lpalomino7030/CyelleOs.git>"
-iso_application="Arch Linux Live/Rescue DVD"
+iso_application="Linux Live/Rescue DVD"
 iso_version="$(date --date="@${SOURCE_DATE_EPOCH:-$(date +%s)}" +%Y.%m.%d)"
 install_dir="cyelleos"
 buildmodes=('iso')
