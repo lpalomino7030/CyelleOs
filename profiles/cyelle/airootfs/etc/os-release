@@ -1,0 +1,10 @@
+NAME="CyelleOS"
+PRETTY_NAME="CyelleOS"
+ID=cyelleos
+BUILD_ID=rolling
+ANSI_COLOR="0;36"
+HOME_URL="https://cyelleos.org"
+DOCUMENTATION_URL="https://docs.cyelleos.org"
+SUPPORT_URL="https://github.com/LuisPalomin05/cyelleOs"
+BUG_REPORT_URL="https://github.com/LuisPalomin05/cyelleOs/issues"
+LOGO=cyelleos
