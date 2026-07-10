@@ -1,0 +1,139 @@
+.
+├── cyelle
+│   ├── airootfs
+│   │   ├── etc
+│   │   │   ├── greetd
+│   │   │   │   └── config.toml
+│   │   │   ├── hostname
+│   │   │   ├── locale.conf
+│   │   │   ├── localtime -> /usr/share/zoneinfo/UTC
+│   │   │   ├── mkinitcpio.conf.d
+│   │   │   │   └── archiso.conf
+│   │   │   ├── mkinitcpio.d
+│   │   │   │   └── linux.preset
+│   │   │   ├── modprobe.d
+│   │   │   │   └── broadcom-wl.conf
+│   │   │   ├── motd
+│   │   │   ├── os-release
+│   │   │   ├── pacman.d
+│   │   │   │   └── hooks
+│   │   │   │       ├── uncomment-mirrors.hook
+│   │   │   │       └── zzzz99-remove-custom-hooks-from-airootfs.hook
+│   │   │   ├── passwd
+│   │   │   ├── resolv.conf -> /run/systemd/resolve/stub-resolv.conf
+│   │   │   ├── shadow
+│   │   │   ├── skel
+│   │   │   ├── ssh
+│   │   │   │   └── sshd_config.d
+│   │   │   │       └── 10-archiso.conf
+│   │   │   ├── systemd
+│   │   │   │   ├── journald.conf.d
+│   │   │   │   │   └── volatile-storage.conf
+│   │   │   │   ├── logind.conf.d
+│   │   │   │   │   └── do-not-suspend.conf
+│   │   │   │   ├── network
+│   │   │   │   │   ├── 20-ethernet.network
+│   │   │   │   │   ├── 20-wlan.network
+│   │   │   │   │   └── 20-wwan.network
+│   │   │   │   ├── networkd.conf.d
+│   │   │   │   │   └── ipv6-privacy-extensions.conf
+│   │   │   │   ├── resolved.conf.d
+│   │   │   │   │   └── archiso.conf
+│   │   │   │   ├── system
+│   │   │   │   │   ├── choose-mirror.service
+│   │   │   │   │   ├── cloud-init.target.wants
+│   │   │   │   │   │   ├── cloud-config.service -> /usr/lib/systemd/system/cloud-config.service
+│   │   │   │   │   │   ├── cloud-final.service -> /usr/lib/systemd/system/cloud-final.service
+│   │   │   │   │   │   ├── cloud-init-local.service -> /usr/lib/systemd/system/cloud-init-local.service
+│   │   │   │   │   │   ├── cloud-init-main.service -> /usr/lib/systemd/system/cloud-init-main.service
+│   │   │   │   │   │   └── cloud-init-network.service -> /usr/lib/systemd/system/cloud-init-network.service
+│   │   │   │   │   ├── dbus-org.freedesktop.ModemManager1.service -> /usr/lib/systemd/system/ModemManager.service
+│   │   │   │   │   ├── dbus-org.freedesktop.network1.service -> /usr/lib/systemd/system/systemd-networkd.service
+│   │   │   │   │   ├── dbus-org.freedesktop.resolve1.service -> /usr/lib/systemd/system/systemd-resolved.service
+│   │   │   │   │   ├── dbus-org.freedesktop.timesync1.service -> /usr/lib/systemd/system/systemd-timesyncd.service
+│   │   │   │   │   ├── etc-pacman.d-gnupg.mount
+│   │   │   │   │   ├── getty@tty1.service.d
+│   │   │   │   │   │   └── autologin.conf
+│   │   │   │   │   ├── livecd-alsa-unmuter.service
+│   │   │   │   │   ├── livecd-talk.service
+│   │   │   │   │   ├── multi-user.target.wants
+│   │   │   │   │   │   ├── choose-mirror.service -> ../choose-mirror.service
+│   │   │   │   │   │   ├── hv_fcopy_daemon.service -> /usr/lib/systemd/system/hv_fcopy_daemon.service
+│   │   │   │   │   │   ├── hv_kvp_daemon.service -> /usr/lib/systemd/system/hv_kvp_daemon.service
+│   │   │   │   │   │   ├── hv_vss_daemon.service -> /usr/lib/systemd/system/hv_vss_daemon.service
+│   │   │   │   │   │   ├── iwd.service -> /usr/lib/systemd/system/iwd.service
+│   │   │   │   │   │   ├── livecd-talk.service -> /etc/systemd/system/livecd-talk.service
+│   │   │   │   │   │   ├── ModemManager.service -> /usr/lib/systemd/system/ModemManager.service
+│   │   │   │   │   │   ├── pacman-init.service -> ../pacman-init.service
+│   │   │   │   │   │   ├── sshd.service -> /usr/lib/systemd/system/sshd.service
+│   │   │   │   │   │   ├── systemd-networkd.service -> /usr/lib/systemd/system/systemd-networkd.service
+│   │   │   │   │   │   ├── systemd-resolved.service -> /usr/lib/systemd/system/systemd-resolved.service
+│   │   │   │   │   │   ├── vboxservice.service -> /usr/lib/systemd/system/vboxservice.service
+│   │   │   │   │   │   ├── vmtoolsd.service -> /usr/lib/systemd/system/vmtoolsd.service
+│   │   │   │   │   │   └── vmware-vmblock-fuse.service -> /usr/lib/systemd/system/vmware-vmblock-fuse.service
+│   │   │   │   │   ├── network-online.target.wants
+│   │   │   │   │   │   └── systemd-networkd-wait-online.service -> /usr/lib/systemd/system/systemd-networkd-wait-online.service
+│   │   │   │   │   ├── pacman-init.service
+│   │   │   │   │   ├── sockets.target.wants
+│   │   │   │   │   │   ├── pcscd.socket -> /usr/lib/systemd/system/pcscd.socket
+│   │   │   │   │   │   └── systemd-networkd.socket -> /usr/lib/systemd/system/systemd-networkd.socket
+│   │   │   │   │   ├── sound.target.wants
+│   │   │   │   │   │   └── livecd-alsa-unmuter.service -> ../livecd-alsa-unmuter.service
+│   │   │   │   │   ├── sysinit.target.wants
+│   │   │   │   │   │   ├── systemd-timesyncd.service -> /usr/lib/systemd/system/systemd-timesyncd.service
+│   │   │   │   │   │   └── systemd-time-wait-sync.service -> /usr/lib/systemd/system/systemd-time-wait-sync.service
+│   │   │   │   │   └── systemd-networkd-wait-online.service.d
+│   │   │   │   │       └── wait-for-only-one-interface.conf
+│   │   │   │   └── system-generators
+│   │   │   │       └── systemd-gpt-auto-generator -> /dev/null
+│   │   │   └── vconsole.conf
+│   │   ├── home
+│   │   │   └── cyelle
+│   │   ├── root
+│   │   │   └── customize_airootfs.sh
+│   │   └── usr
+│   │       └── local
+│   │           ├── bin
+│   │           │   ├── choose-mirror
+│   │           │   ├── Installation_guide
+│   │           │   └── livecd-sound
+│   │           └── share
+│   │               ├── livecd-sound
+│   │               │   └── asound.conf.in
+│   │               └── wallpapers
+│   │                   ├── bk2.png
+│   │                   └── bk.png
+│   ├── bootstrap_packages
+│   ├── efiboot
+│   │   └── loader
+│   │       ├── entries
+│   │       │   ├── 01-archiso-linux.conf
+│   │       │   ├── 02-archiso-speech-linux.conf
+│   │       │   └── 03-archiso-memtest86+x64.conf
+│   │       └── loader.conf
+│   ├── grub
+│   │   ├── grub.cfg
+│   │   └── loopback.cfg
+│   ├── packages.x86_64
+│   ├── pacman.conf
+│   ├── profiledef.sh
+│   ├── scripts
+│   │   ├── 10-users.sh
+│   │   ├── 20-greetd.sh
+│   │   ├── 30-hyprland.sh
+│   │   ├── 40-network.sh
+│   │   ├── 50-branding.sh
+│   │   ├── firstboot.sh
+│   │   └── install.sh
+│   └── syslinux
+│       ├── archiso_head.cfg
+│       ├── archiso_pxe.cfg
+│       ├── archiso_pxe-linux.cfg
+│       ├── archiso_sys.cfg
+│       ├── archiso_sys-linux.cfg
+│       ├── archiso_tail.cfg
+│       ├── splash.png
+│       └── syslinux.cfg
+└── txtcyelle.txt
+
+44 directories, 93 files
