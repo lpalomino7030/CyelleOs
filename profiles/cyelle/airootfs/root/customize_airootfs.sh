@@ -14,5 +14,6 @@ sed -i 's/^# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
 # Crear carpetas de configuración
 mkdir -p /home/cyelle/.config
 
-# Asignar propietario
+chmod 644 /home/cyelle/.bash_profile
+
 chown -R cyelle:cyelle /home/cyelle
