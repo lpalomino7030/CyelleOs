@@ -3,7 +3,7 @@
 set -e
 
 # Crear usuario live
-useradd -m -G wheel,audio,video,storage,input -s /bin/bash cyelle
+useradd -G wheel,audio,video,storage,input -s /bin/bash cyelle
 
 # Contraseña (solo para pruebas)
 echo "cyelle:cyelle" | chpasswd
